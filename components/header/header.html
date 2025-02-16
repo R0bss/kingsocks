@@ -1,0 +1,41 @@
+<header class="header">
+  <div class="container">
+    <img src="/assets//icons/logo.svg" alt="" />
+    <nav class="menu">
+      <button class="menu-toggle">☰</button>
+      <ul class="menu-items">
+        <li><a href="#" onclick="loadPage('home')">Benefícios</a></li>
+        <li class="dropdown">
+          <a href="#" onclick="loadPage('about')">Produtos</a>
+          <img
+            class="icon-arrow"
+            src="../assets/icons/up-arrow.svg"
+            alt="Menu Suspenso Carrinho"
+            onclick="toggleDropdown('dropdownProdutos')"
+          />
+
+          <div class="dropdown-content" id="dropdownProdutos">
+            <a onclick="loadPage('socks', 'product')">Meias KingSocks</a>
+            <a href="#">Canelitos</a>
+            <a href="#">Camisetas</a>
+          </div>
+        </li>
+        <li><a href="#" onclick="loadPage('contact')">Lojistas</a></li>
+        <li><a href="#" onclick="loadPage('contact')">Contatos</a></li>
+      </ul>
+      <div class="menu-cart">
+        <img
+          class="icon-cart"
+          src="../assets/icons/cart.svg"
+          alt="Ícone Carrinho"
+        />
+        Meu Carrinho
+        <img
+          class="icon-arrow"
+          src="../assets/icons/up-arrow.svg"
+          alt="Menu Suspenso Carrinho"
+        />
+      </div>
+    </nav>
+  </div>
+</header>

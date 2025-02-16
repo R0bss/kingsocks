@@ -1,0 +1,1069 @@
+.content-home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* INTRODUÇÃO */
+.introduction {
+  position: relative; /* Define posição relativa para conter o ::before */
+  background-image: url("/assets/images/background-soccer.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex; /* Para alinhar texto centralizado */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; /* Define a cor do texto */
+  z-index: 1; /* Mantém o conteúdo acima da camada escura */
+}
+
+/* Camada escurecedora sem afetar o texto */
+.introduction::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade conforme necessário */
+  z-index: -1; /* Coloca a camada atrás do conteúdo */
+}
+
+.content-introduction {
+  max-width: 480px;
+  margin-left: 40em;
+
+  .subtitle {
+    font-family: var(--font-secondary);
+    font-size: var(--font-subtitle-24);
+    color: var(--primary);
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .list {
+    .item {
+      display: flex;
+      font-family: var(--font-secondary);
+      font-size: var(--font-subtitle-20);
+      font-weight: 500;
+
+      .item-text {
+        margin-left: 0.5em;
+      }
+    }
+
+    .item:nth-child(2) .item-icon {
+      margin-left: 25px;
+    }
+    .item:nth-child(3) .item-icon {
+      margin-left: 50px;
+    }
+  }
+
+  .button {
+    margin-top: 25px;
+  }
+}
+
+/* ESCOLHAS */
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 1em;
+
+  .subtitle-choices {
+    font-family: var(--font-secondary);
+    font-size: var(--font-subtitle-28);
+    font-weight: 500;
+    color: var(--white);
+    width: 150px;
+    text-transform: uppercase;
+  }
+
+  .half {
+    border: 2px solid var(--c8);
+    padding: 20px 40px;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    margin: 1em;
+
+    .text {
+      text-transform: uppercase;
+      text-decoration: underline 2px;
+      color: var(--c8);
+    }
+  }
+
+  .shin-guard {
+    //border: 2px solid var(--secondary1);
+    padding: 20px 40px;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    margin: 1em;
+
+    .text {
+      text-transform: uppercase;
+      //text-decoration: underline 2px;
+      color: var(--secondary1);
+    }
+  }
+
+  .t-shirts {
+    //border: 2px solid var(--secondary1);
+    padding: 20px 40px;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    margin: 1em;
+
+    .text {
+      text-transform: uppercase;
+      //text-decoration: underline 2px;
+      color: var(--secondary1);
+    }
+  }
+
+  .subtitle-choices2 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-subtitle-28);
+    font-weight: 500;
+    color: var(--white);
+    width: 150px;
+    text-transform: uppercase;
+
+    .highlight {
+      font-style: normal;
+      color: var(--secondary1);
+    }
+  }
+}
+
+/* BENEFÍCIOS */
+.advantages {
+  position: relative;
+  display: inline-block;
+  padding: 4em;
+
+  .subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaço entre os elementos */
+    font-size: var(--font-subtitle-28);
+
+    .title {
+      color: #ff6600; /* Cor do texto (ajuste conforme necessário) */
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .line {
+      flex-grow: 1; /* Faz com que as linhas ocupem o máximo de espaço disponível */
+      height: 2px; /* Espessura da linha */
+      background-color: #ffaa80; /* Cor da linha (ajuste conforme necessário) */
+      max-width: 50px; /* Limite do tamanho da linha */
+    }
+  }
+
+  .subtitle2 {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+
+    .textBack {
+      position: absolute;
+      top: -40px; /* Ajuste para posicionar acima */
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--c1);
+      font-weight: bold;
+      font-size: 72px;
+      text-transform: uppercase;
+      opacity: 0.3; /* Para criar um efeito de sombra, se necessário */
+      z-index: 0;
+    }
+
+    .textFront {
+      position: relative;
+      color: black;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 48px; /* Ajuste conforme necessário */
+      z-index: 1;
+    }
+  }
+
+  .details-advantages {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 3em;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 356px;
+
+      img {
+        max-width: 356px;
+        max-height: 356px;
+      }
+
+      .title {
+        color: var(--secondary1);
+        font-family: var(--font-secondary);
+        font-size: var(--font-subtitle-24);
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+
+      .subtitle {
+        color: var(--black);
+        font-family: var(--font-secondary);
+        font-size: var(--font-subtitle-24);
+        font-weight: 300;
+        margin-bottom: 0.75em;
+      }
+
+      .text {
+        em {
+          font-style: normal;
+          color: var(--secondary1);
+        }
+      }
+    }
+  }
+}
+
+/* ESTILO E PERFORMANCE */
+.style-performance {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to bottom, var(--black), #31363c);
+  gap: 3em;
+
+  img {
+    width: 519px;
+    height: 729px;
+    object-fit: none;
+    //transform: scale(0.5);
+    position: relative;
+    top: -50px; 
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  .content {
+    max-width: 600px;
+
+    .subtitle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px; /* Espaço entre os elementos */
+      font-size: var(--font-subtitle-28);
+      font-family: var(--font-secondary);
+      margin-top: 1.5em;
+      text-align: center; /* Centraliza o texto */
+
+      .title {
+        color: #ff6600; /* Cor do texto (ajuste conforme necessário) */
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+
+      .line {
+        flex-grow: 1; /* Faz com que as linhas ocupem o máximo de espaço disponível */
+        height: 3px; /* Espessura da linha */
+        background-color: #4e2d17; /* Cor da linha (ajuste conforme necessário) */
+        max-width: 50px; /* Limite do tamanho da linha */
+      }
+    }
+
+    h1 {
+      color: var(--primary);
+      font-weight: 400;
+      text-align: left;
+      margin-left: 1.25em;
+    }
+
+    .text {
+      margin-top: 2em;
+      margin-left: 4em;
+      text-align: start; /* Melhora a leitura */
+      max-width: 469px;
+      color: var(--white);
+      font-weight: 300;
+      font-size: var(--font-body-size-18);
+
+      em {
+        font-style: normal;
+        color: var(--secondary1);
+      }
+    }
+  }
+}
+
+/* MENSAGEM PARA USUARIO */
+.message-for-user {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, #ff8c3f, #ff6700);
+  padding: 40px 0;
+
+  .content-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    .text {
+      text-transform: uppercase;
+      color: var(--secondary2);
+      font-family: var(--font-secondary);
+      font-size: var(--font-subtitle-28);
+      font-weight: 500;
+      text-align: end;
+
+      p:last-child {
+        color: var(--white);
+      }
+    }
+    button {
+      margin-top: 2em;
+    }
+  }
+
+  .content-2 {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    //background: rgba(255, 106, 0, 0.5); /* Cor laranja com 50% de transparência */
+    color: var(--white);
+    //font-size: 24px;
+    //font-weight: bold;
+    text-align: center;
+    //text-transform: uppercase;
+    border-radius: 10px; /* Bordas arredondadas */
+    max-width: 263px;
+    max-height: 300px;
+
+    em {
+      font-style: normal;
+      color: var(--secondary2);
+    }
+  }
+
+  /* Pseudo-elemento para o primeiro border */
+  .content-2::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #ffac36; /* Borda branca semi-transparente */
+    border-radius: 4px;
+    //background: rgba(255, 106, 0, 0.5); /* Fundo transparente */
+  }
+
+  /* Pseudo-elemento para o segundo border */
+  .content-2::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #ff6700; /* Borda ainda mais transparente */
+    border-radius: 4px;
+  }
+}
+
+/* FAÇA SEU ESTILO */
+.make-style {
+  margin-bottom: 40px;
+
+  .subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaço entre os elementos */
+    font-size: var(--font-subtitle-28);
+    font-family: var(--font-secondary);
+    margin-top: 1.5em;
+    text-align: center; /* Centraliza o texto */
+
+    .title {
+      color: #ff6600; /* Cor do texto (ajuste conforme necessário) */
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .line {
+      flex-grow: 1; /* Faz com que as linhas ocupem o máximo de espaço disponível */
+      height: 3px; /* Espessura da linha */
+      background-color: #ffdfc9; /* Cor da linha (ajuste conforme necessário) */
+      max-width: 50px; /* Limite do tamanho da linha */
+    }
+  }
+
+  .benefits {
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--c0);
+    width: max-content;
+    padding: 30px 30px 30px 0;
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+
+    .vector-right-icon {
+      //background: var(--c0); /* Define a cor desejada */
+      background: linear-gradient(to right, var(--white), var(--c0));
+      //background: #31363c;
+      //-webkit-mask: url("/assets/icons/vector-right.svg") no-repeat center /        contain;
+      mask: url("/assets/icons/vector-right.svg") no-repeat center / contain;
+      width: 250px;
+      height: 140px;
+    }
+
+    h3 {
+      width: 164px;
+      margin: 0 1em;
+      color: var(--c4);
+
+      em {
+        font-style: normal;
+        color: var(--secondary1);
+      }
+    }
+
+    .list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+      gap: 20px; /* Espaço entre os itens */
+      //max-width: 800px; /* Ajuste conforme necessário */
+      //margin: auto; /* Centraliza na tela */
+      //width: 100%;
+    }
+
+    .item {
+      display: flex;
+      align-items: center; /* Centraliza verticalmente */
+      gap: 10px; /* Espaço entre o ícone e o texto */
+      background: white; /* Cor do fundo */
+      padding: 15px 20px;
+      border-radius: 4px; /* Bordas arredondadas */
+      box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease-in-out; /* Efeito suave */
+      width: 400px;
+      height: 88px;
+    }
+
+    .item:hover {
+      transform: scale(1.05); /* Efeito de leve aumento no hover */
+    }
+
+    .item img {
+      width: 48px; /* Tamanho do ícone */
+      height: 48px;
+    }
+
+    .item p {
+      font-size: 16px;
+      font-weight: bold;
+      color: var(--secondary2);
+    }
+  }
+
+  .subtitle2 {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 0;
+
+    .textBack {
+      position: absolute;
+      top: -40px; /* Ajuste para posicionar acima */
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--c1);
+      font-weight: bold;
+      font-size: 72px;
+      text-transform: uppercase;
+      opacity: 0.3; /* Para criar um efeito de sombra, se necessário */
+      z-index: 0;
+    }
+
+    .textFront {
+      position: relative;
+      color: black;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 48px; /* Ajuste conforme necessário */
+      z-index: 1;
+    }
+  }
+
+  /* Container do título e botões */
+  .carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1090px;
+    margin: auto;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--c2);
+  }
+
+  .carousel-header h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #ff6600;
+    font-family: var(--font-secondary);
+  }
+
+  /* Botões de navegação */
+  .carousel-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .prev,
+  .next {
+    background: #ccc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background: #999;
+  }
+
+  /* Carrossel */
+  .carousel {
+    display: flex;
+    justify-content: center;
+    max-width: 1125px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .carousel-container {
+    overflow: hidden;
+    width: 100%;
+    //max-width: 880px;
+  }
+
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .item-carousel {
+    //min-width: 200px;
+    //max-width: 200px;
+    background: white;
+    //margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    //box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+
+  .item-carousel img {
+    width: 260px;
+    max-width: 260px;
+    border-radius: 5px;
+  }
+
+  .item-carousel p {
+    margin-left: 0.5em;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .price {
+    margin-left: 0.5em;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff6600;
+  }
+
+  /* Estilos da paginação */
+  .carousel-pagination {
+    display: flex;
+    justify-content: center; /* Centraliza os círculos horizontalmente */
+    align-items: center; /* Garante alinhamento vertical */
+    margin: 20px auto; /* Centraliza horizontalmente */
+    gap: 8px;
+    border-top: 3px solid var(--c2);
+    padding-top: 10px;
+    max-width: 100px; /* Mantém tamanho ajustado */
+    position: relative;
+  }
+
+  .pagination-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+
+  .pagination-dot.active {
+    background-color: #ff6600;
+  }
+}
+
+/* CAMISETAS */
+.t-shirts {
+  background: linear-gradient(180deg, #000 19.77%, #31363c 100%);
+
+  .header-t-shirts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    img {
+      margin: 0 40px;
+    }
+
+    .subtitle2 {
+      position: relative;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 80px 40px;
+
+      .textBack {
+        position: absolute;
+        top: -40px; /* Ajuste para posicionar acima */
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--c11);
+        font-weight: bolder;
+        font-size: 72px;
+        text-transform: uppercase;
+        opacity: 0.3; /* Para criar um efeito de sombra, se necessário */
+        z-index: 0;
+        width: max-content;
+      }
+
+      .textFront {
+        position: relative;
+        color: var(--primary);
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 48px; /* Ajuste conforme necessário */
+        z-index: 1;
+      }
+    }
+
+    .text-t-shirts {
+      font-size: var(--font-subtitle-20);
+      font-family: var(--font-secondary);
+      text-transform: uppercase;
+      max-width: 507px;
+      margin: 0 20px;
+      color: var(--c0);
+
+      em {
+        font-style: normal;
+        color: var(--secondary1);
+      }
+    }
+  }
+
+  /* Container do título e botões */
+  .carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1090px;
+    margin: auto;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--secondary2);
+  }
+
+  .carousel-header h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #ff6600;
+    font-family: var(--font-secondary);
+  }
+
+  /* Botões de navegação */
+  .carousel-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .prev,
+  .next {
+    background: var(--c10);
+    color: var(--c7);
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background: #999;
+  }
+
+  /* Carrossel */
+  .carousel {
+    display: flex;
+    justify-content: center;
+    max-width: 1125px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .carousel-container {
+    overflow: hidden;
+    width: 100%;
+    //max-width: 880px;
+  }
+
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .item-carousel {
+    //min-width: 200px;
+    //max-width: 200px;
+    //background: white;
+    //margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    //box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+
+  .item-carousel img {
+    width: 260px;
+    max-width: 260px;
+    border-radius: 5px;
+  }
+
+  .item-carousel p {
+    margin-left: 0.5em;
+    font-size: 14px;
+    color: var(--white);
+  }
+
+  .price {
+    margin-left: 0.5em;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary);
+  }
+
+  /* Estilos da paginação */
+  .carousel-pagination {
+    display: flex;
+    justify-content: center; /* Centraliza os círculos horizontalmente */
+    align-items: center; /* Garante alinhamento vertical */
+    margin: 20px auto; /* Centraliza horizontalmente */
+    gap: 8px;
+    border-top: 3px solid var(--secondary2);
+    padding-top: 10px;
+    max-width: 100px; /* Mantém tamanho ajustado */
+    position: relative;
+  }
+
+  .pagination-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+
+  .pagination-dot.active {
+    background-color: #ff6600;
+  }
+
+  .content-t-shirts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .subtitle-t-shirts p {
+      font-family: var(--font-secondary);
+      font-size: var(--font-subtitle-24);
+      color: var(--c7);
+      text-transform: uppercase;
+      font-weight: 500;
+
+      em {
+        font-style: normal;
+        color: var(--secondary1);
+      }
+    }
+
+    /* Garante que o carrossel fique dentro do container e evite sobreposição */
+    .carousel-t-shirts {
+      overflow: hidden;
+      width: 80%;
+      max-width: 650px;
+      position: relative;
+    }
+
+    /* Carrossel de Ícones */
+    .carousel-icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 800px;
+      //margin: auto;
+      margin: 0 20px;
+      position: relative;
+      overflow: hidden; /* Evita que o track ultrapasse os botões */
+    }
+
+    /* Track (faixa onde os itens deslizam) */
+    .carousel-track {
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    /* Itens do carrossel */
+    .carousel-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      padding: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* Ícone da equipe */
+    .carousel-item img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--secondary2);
+      padding: 10px;
+      transition: border 0.3s ease-in-out;
+    }
+
+    /* Texto abaixo do ícone */
+    .carousel-item p {
+      color: white;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    /* Efeito ao selecionar um item */
+    .carousel-item.selected img {
+      border: 3px solid #ff6600; /* Borda laranja quando selecionado */
+    }
+
+    /* Botões de navegação */
+    .carousel-btn {
+      background: var(--c11);
+      border: none;
+      color: var(--c10);
+      font-size: 20px;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background 0.3s ease-in-out;
+      width: 48px;
+      height: 48px;
+    }
+
+    .carousel-btn:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+/* REVENDA LOJISTAS */
+.retail-resale {
+  //width: 100%;
+  //height: 100vh; /* Ocupa toda a altura da tela */
+  background: linear-gradient(to bottom, #ff8c3f, #ff6700 65%, #ffffff 35%);
+
+  .content-retail-resale {
+    margin-bottom: 80px;
+  }
+
+  .subtitle2 {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 40px;
+
+    .textBack {
+      position: absolute;
+      top: -40px; /* Ajuste para posicionar acima */
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--secondary1);
+      font-weight: bolder;
+      font-size: 72px;
+      text-transform: uppercase;
+      opacity: 0.3; /* Para criar um efeito de sombra, se necessário */
+      z-index: 0;
+      width: max-content;
+    }
+
+    .textFront {
+      position: relative;
+      color: var(--black);
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 48px; /* Ajuste conforme necessário */
+      z-index: 1;
+    }
+  }
+
+  .box-retail-resale {
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    font-size: 0;
+    line-height: 0; /* Remove espaços extras criados pelo line-height */
+  }
+
+  .left-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 100px 0;
+
+    .top-box {
+      background-color: var(--primary);
+      border-radius: 4px 0px 0px 4px;
+      max-width: 640px;
+      margin-bottom: 40px;
+      p {
+        font-family: var(--font-secondary);
+        font-size: var(--font-subtitle-20);
+        font-weight: 500;
+        padding: 20px 50px;
+      }
+    }
+
+    .bottom-box {
+      background-color: var(--primary);
+      border-radius: 4px 0px 0px 4px;
+      max-width: 574px;
+      margin-bottom: 40px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        font-family: var(--font-secondary);
+        color: var(--secondary2);
+        font-size: var(--font-subtitle-20);
+        //max-width: 551px;
+        text-transform: uppercase;
+      }
+
+      .highlight-box {
+        font-size: var(--font-body-size-18);
+        font-weight: 500;
+        padding: 20px;
+        text-align: center;
+        max-width: 400px;
+        margin-top: 20px;
+        background-color: var(--white);
+        border-radius: 4px;
+        p {
+          color: var(--secondary1);
+        }
+      }
+    }
+
+    .button-box {
+      width: 100%;
+      max-width: 614px;
+      display: flex;
+      justify-content: center;
+
+      .button {
+        color: var(--white);
+        display: flex;
+        align-items: center;
+
+        img {
+          margin-right: 0.25em;
+        }
+      }
+    }
+  }
+  .right-box {
+    width: 417px; /* Tamanho fixo */
+    height: 650px; /* Tamanho fixo */
+
+    img {
+      display: block; /* Remove espaço do comportamento inline */
+      width: 100%; /* Ocupa toda a largura da caixa */
+      height: 100%; /* Ocupa toda a altura da caixa */
+      object-fit: none; /* Garante que a imagem preencha a div */
+      box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
+}

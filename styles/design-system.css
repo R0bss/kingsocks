@@ -1,0 +1,141 @@
+/* ==============================
+   🎨 DESIGN SYSTEM - GUIA DE DIAGRAMAÇÃO
+   ============================== */
+
+/* 🌑 Tons de Preto */
+:root {
+  --c12: #000000;
+  --c11: #111111;
+  --c10: #2E2E2E;
+  --c9:  #404040;
+  --c8:  #595959;
+  --c7:  #717171;
+  --c6:  #9C9C9C;
+  --c5:  #B2B2B2;
+  --c4:  #CCCCCC;
+  --c3:  #DEDEDE;
+  --c2:  #EDEDED;
+  --c1:  #F4F4F4;
+  --c0:  #FAFAFA;
+  --white: #FFFFFF;
+}
+
+
+/* 🎨 Paleta de Cores */
+:root {
+  --primary: #FEA01A;  /* p1 */
+  --black: #000000;    /* b */
+  --white: #FFFFFF;    /* w */
+
+  --secondary1: #FF6700; /* s1 */
+  --secondary2: #31363C; /* s2 */
+}
+
+/* 🔠 Tipografia */
+/* :root {
+  --font-primary: 'Bungee', sans-serif;
+  --font-secondary: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+
+  // Tamanhos de fonte
+  --font-title-xl: 48px;  //Bungee 
+  --font-title-lg: 40px;  //Bungee 
+  --font-title-md: 32px; //Bungee 
+  
+  --font-subtitle-28: 28px; // Montserrat
+  --font-subtitle-24: 24px; // Montserrat 
+  --font-subtitle-20: 20px; //Montserrat 
+  
+  --font-body: 14px; // Robot
+} */
+:root {
+  --font-primary: 'Bungee', sans-serif;
+  --font-secondary: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+
+  /* Tamanhos de fonte */
+  --font-title-xl: 48px; /* Bungee */
+  --font-title-lg: 40px; /* Bungee */
+  --font-title-md: 32px; /* Bungee */
+  
+  --font-subtitle-28: 28px; /* Montserrat */
+  --font-subtitle-24: 24px; /* Montserrat */
+  --font-subtitle-20: 20px; /* Montserrat */
+  
+  --font-body-size-14: 14px; /* Alterado para não sobrescrever a fonte */
+  --font-body-size-16: 16px; /* Alterado para não sobrescrever a fonte */
+  --font-body-size-18: 18px;
+}
+
+/* 📏 Espaçamentos */
+:root {
+  --spacing-004: 4px;
+  --spacing-008: 8px;
+  --spacing-012: 12px;
+  --spacing-016: 16px;
+  --spacing-020: 20px;
+  --spacing-024: 24px;
+  --spacing-032: 32px;
+  --spacing-036: 36px;
+  --spacing-040: 40px;
+  --spacing-048: 48px;
+  --spacing-060: 60px;
+  --spacing-072: 72px;
+  --spacing-088: 88px;
+  --spacing-120: 120px;
+  --spacing-168: 168px;
+  --spacing-200: 200px;
+}
+
+/* ==============================
+ 🌐 USO PRÁTICO NO PROJETO
+ ============================== */
+
+/* Exemplo de uso das variáveis */
+body {
+  font-family: var(--font-body);
+  color: var(--c10);
+  background-color: var(--white);
+}
+
+/* Cabeçalhos */
+h1, h2, h3 {
+  font-family: var(--font-primary);
+}
+
+h1 { font-size: var(--font-title-xl); }
+h2 { font-size: var(--font-title-lg); }
+h3 { font-size: var(--font-title-md); }
+
+p {
+  font-size: var(--font-body);
+  line-height: 1.5;
+}
+
+/* Botões */
+.button {
+  background: linear-gradient(to bottom, #ff8c3f, #ff6700);
+  color: var(--black);
+  padding: var(--spacing-016) var(--spacing-032);
+  font-size: var(--font-body-size-16);
+  font-weight: bold;
+  border-radius: var(--spacing-004);
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+}
+
+/* Seções */
+.section {
+  padding: var(--spacing-048);
+}
+
+/* Margens e espaçamentos */
+.mt-4 { margin-top: var(--spacing-004); }
+.mt-8 { margin-top: var(--spacing-008); }
+.mt-16 { margin-top: var(--spacing-016); }
+.mt-32 { margin-top: var(--spacing-032); }
+
+.pt-8 { padding-top: var(--spacing-008); }
+.pt-16 { padding-top: var(--spacing-016); }
+.pt-32 { padding-top: var(--spacing-032); }

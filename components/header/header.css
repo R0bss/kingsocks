@@ -1,0 +1,95 @@
+/* Estilos do Header */
+.header {
+  //background: var(--primary);
+  background: linear-gradient(to bottom, #ff8c3f, #ff6700);
+  color: var(--white);
+  //padding: var(--spacing-016);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  margin-left: 5em;
+  display: flex;
+
+  .icon-arrow {
+    height: max-content;
+    padding: 0.25em;
+    transition: transform 0.3s ease-in-out; /* Adiciona animação */
+  }
+
+  .icon-arrow.rotated {
+    transform: rotate(180deg);
+  }
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu li {
+  margin: 0 var(--spacing-012);
+  border-left: 2px solid #ffae3a;
+  //border-right: 2px solid #FFAE3A;
+  padding-left: 1rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 180px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.menu .dropdown-content a {
+  color: var(--white);
+  display: block;
+  padding: 10px 15px;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+}
+
+.menu li:last-child {
+  border-right: 2px solid #ffae3a;
+  padding-right: 1rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.menu .menu-cart {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+
+  .icon-cart {
+    margin: 1em;
+  }
+
+  .icon-arrow {
+    margin: 0.25em;
+  }
+}
+
+/* Botão de Menu Mobile */
+.menu-toggle {
+  display: none; /* Escondido por padrão */
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+}

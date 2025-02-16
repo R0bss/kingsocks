@@ -1,0 +1,24 @@
+@import url("design-system.css");
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  //box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--c10);
+  background-color: var(--white);
+}
+
+/* Layout Responsivo */
+.container {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
